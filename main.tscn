@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://c370sv7jvvben"]
 
 [ext_resource type="Texture2D" uid="uid://c6m71l1nle64u" path="res://cobble_normal.png" id="1_ayksi"]
-[ext_resource type="Script" path="res://XrInterface.gd" id="1_tljyd"]
-[ext_resource type="Script" path="res://HandDataPoller.gd" id="3_7eh6y"]
-[ext_resource type="Script" path="res://CubeHand.gd" id="4_wcw16"]
+[ext_resource type="Script" path="res://Scripts/XrInterface.gd" id="1_tljyd"]
+[ext_resource type="Script" path="res://Scripts/HandDataPoller.gd" id="3_7eh6y"]
+[ext_resource type="Script" path="res://Scripts/GnomonHand.gd" id="4_wcw16"]
 
 [sub_resource type="Environment" id="Environment_sugqd"]
 background_mode = 1
@@ -64,3 +64,9 @@ script = ExtResource("3_7eh6y")
 
 [node name="LeftHand" type="Node" parent="XROrigin3D/HandDataPoller"]
 script = ExtResource("4_wcw16")
+gnomon_scale = Vector3(0.02, 0.02, 0.02)
+
+[node name="RightHand" type="Node" parent="XROrigin3D/HandDataPoller"]
+script = ExtResource("4_wcw16")
+handedness = 1
+gnomon_scale = Vector3(0.02, 0.02, 0.02)

@@ -6,11 +6,7 @@ var right_tracker: XRHandTracker
 var latest_left: Dictionary
 var latest_right: Dictionary
 
-func _ready():
-	var trackers = XRServer.get_hand_trackers()
-	
-	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Attempt to fetch the trackers if they haven't already
 	if !left_tracker || !right_tracker:
 		var trackers = XRServer.get_hand_trackers()

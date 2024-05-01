@@ -17,7 +17,7 @@ func _ready():
 		viewport.use_xr = true
 		
 		# Attempt to start the app in passthrough mode
-		enable_passthrough()
+		#enable_passthrough()
 		
 	else:
 		print("OpenXR failed to initialize.")

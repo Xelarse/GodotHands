@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfsruv06rpeax"]
+
+[ext_resource type="Material" uid="uid://c7fhac3ydtjr7" path="res://prefabs/GnomonMatX.tres" id="1_cgfpr"]
+[ext_resource type="Material" uid="uid://bgfiwayrm7ayg" path="res://prefabs/GnomonMatY.tres" id="2_6jkxg"]
+[ext_resource type="Material" uid="uid://cdmg6k3dks6qb" path="res://prefabs/GnomonMatZ.tres" id="3_5ogm3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pw3xf"]
+material = ExtResource("1_cgfpr")
+size = Vector3(0.6, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tffxj"]
+material = ExtResource("2_6jkxg")
+size = Vector3(0.1, 0.6, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w6hu0"]
+material = ExtResource("3_5ogm3")
+size = Vector3(0.1, 0.1, 0.6)
+
+[node name="Gnomon" type="Node3D"]
+
+[node name="X" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+mesh = SubResource("BoxMesh_pw3xf")
+
+[node name="Y" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("BoxMesh_tffxj")
+
+[node name="Z" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
+mesh = SubResource("BoxMesh_w6hu0")
